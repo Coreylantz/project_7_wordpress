@@ -1,9 +1,9 @@
 footer {
 	clear: both;
 	background: $black;
-	color: $textGrey;
 	
 	li {
+		color: $textGrey;
 		list-style: none;
 	}
 
@@ -11,22 +11,31 @@ footer {
 		padding: 0;
 		background: none;
 
-		a {
+		a,p {
 			color: $textGrey;
 			font-weight: inherit;
+			font-family: $navText;
+			font-size: 1.3rem;
+		}
+
+		p {
+			color: $link;
 		}
 	}
 	.container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		text-transform: uppercase;
 	}
 
-	h3 {
-		color: $textGrey;
-		margin: 0;
-		font-family: $navText;
+	h5 {
+	   	color: $textGrey;
+	    padding: 10px;
+	    font-weight: 700;
+	    font-family: "Open Sans",sans-serif;
+	    
+	    font-weight: normal;
+	    font-size: 1.3rem;
 	}
-
-
 }

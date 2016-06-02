@@ -15,31 +15,26 @@
         
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-        <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-          <h1 class="entry-title"><?php the_title(); ?></h1>
+       <?php $frontPagePosts = new WP_Query( ['posts_per_page' => 4] ); ?>
+               <?php if ( $frontPagePosts->have_posts() ) : ?>
+                   <?php while ( $frontPagePosts->have_posts() ) : $frontPagePosts->the_post(); ?>
+                      <div class="frontPost">
+                        <div class="frontPostText">
+                          <p><?php the_category(' '); ?></p>
+                          <h2><?php the_title(); ?></h2>
+                          <p><?php the_date(); ?></p>
+                          <?php the_excerpt(); ?>
+                        </div>
+                        <div class="images">
+                          <img src="<?php the_post_thumbnail_url('Thumbnail'); ?>">
+                        </div>
+                      </div>
+                   <?php endwhile; ?>
+                   <?php wp_reset_postdata(); ?>
 
-          <div class="entry-meta">
-            <?php hackeryou_posted_on(); ?>
-          </div><!-- .entry-meta -->
-
-          <div class="entry-content">
-            <?php the_content(); ?>
-            <?php wp_link_pages(array(
-              'before' => '<div class="page-link"> Pages: ',
-              'after' => '</div>'
-            )); ?>
-          </div><!-- .entry-content -->
-
-          <div class="entry-utility">
-            <?php hackeryou_posted_in(); ?>
-            <?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?>
-          </div><!-- .entry-utility -->
-        </div><!-- #post-## -->
-
-        <div id="nav-below" class="navigation">
-          <p class="nav-previous"><?php previous_post_link('%link', '&larr; %title'); ?></p>
-          <p class="nav-next"><?php next_post_link('%link', '%title &rarr;'); ?></p>
-        </div><!-- #nav-below -->
+           <?php else:  ?>
+               [stuff that happens if there aren't any posts]
+           <?php endif; ?>
 
         <?php comments_template( '', true ); ?>
 

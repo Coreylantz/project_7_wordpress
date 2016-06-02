@@ -48,6 +48,8 @@ function hackeryou_styles(){
 	wp_enqueue_style('style', get_stylesheet_uri() );
 
 	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+
+	wp_enqueue_style('wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Lora:400,400italic,700|Open+Sans:400,700,400italic');
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_styles');
@@ -181,10 +183,10 @@ function hackeryou_widgets_init() {
 		'name' => 'Footer Widget',
 		'id' => 'footer-widget-area',
 		'description' => 'The footer widget area',
-		'before_widget' => '<ul class="menu"><li id="%1$s" class="widget-container %2$s">',
-		'after_widget' => '</li></ul>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
+		'before_widget' => '<ul class="menu">',
+		'after_widget' => '</ul>',
+		'before_title' => '<h5 class="widget-title">',
+		'after_title' => '</h5>',
 	) );
 
 }

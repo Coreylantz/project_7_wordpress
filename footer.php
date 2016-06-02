@@ -1,5 +1,8 @@
 <footer>
   <div class="container">
+	<div class="topFooter"></div>
+
+
 	<?php wp_nav_menu( array(
 		'theme_location' => 'footer'
 	)); ?>
