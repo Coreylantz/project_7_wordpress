@@ -7,6 +7,7 @@
 * Author URI: http://hackeryou.com
 */
 
+@import 'variables';
 @import 'normalize';
 @import 'typography';
 @import 'navigation';
@@ -14,6 +15,7 @@
 @import 'comments';
 @import 'footer';
 /*
+
 ====================================
 Default Styling
 ====================================
@@ -25,6 +27,7 @@ img {
 
 body {
 	color: #333;
+	background: $background;
 }
 
 .container {
@@ -36,10 +39,61 @@ body {
 	float: left;
 	width: 65%;
 	margin-right: 5%;
+	margin: 0 auto;
 }
 
 .full {
 	width: 100%;
+}
+
+// Front-page styles //
+
+.hero {
+	height: 75vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5%;
+
+
+	.heroPost {
+		background: $background;
+		position: relative;
+		padding: 5% 10%;
+		text-align: center;
+		z-index: 20;
+		
+		a {
+			z-index: 50;
+		}
+
+		&:before {
+			content: '';
+			border: 1px solid $textGrey;
+			position: absolute;
+			top: -72px;
+			left: -140px;
+			right: -140px;
+			bottom: -72px;
+			border-radius: 5px;
+			z-index: -1;
+			
+
+		}
+
+		&:after {
+			content: '';
+			border: 1px solid $textGrey;
+			position: absolute;
+			top: -70px;
+			left: -142px;
+			right: -142px;
+			bottom: -70px;
+			border-radius: 5px;
+			z-index: 10;
+			z-index: -2;
+		}
+	}	
 }
 
 

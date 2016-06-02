@@ -1,3 +1,32 @@
 footer {
 	clear: both;
+	background: $black;
+	color: $textGrey;
+	
+	li {
+		list-style: none;
+	}
+
+	ul.menu {
+		padding: 0;
+		background: none;
+
+		a {
+			color: $textGrey;
+			font-weight: inherit;
+		}
+	}
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	h3 {
+		color: $textGrey;
+		margin: 0;
+		font-family: $navText;
+	}
+
+
 }

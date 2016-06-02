@@ -1,15 +1,34 @@
+
 a {
-	color: #BA209B;
+	color: $link;
 	text-decoration: none;
+	font-size: 1.6rem;
 	&:hover {
-		color: #D424B1;
+		color: #000000;
 	}
+}
+
+span {
+	font-size: 1.6rem;
 }
 
 /* paragraphs */
 
+h1,h2,h3,h4,h5,h6 {
+	font-family: $headerText;
+	font-weight: bold;
+	color: $black;
+}
+
+h1 {
+	font-size: 3.5rem;
+}
+
 p {
+	font-family: $bodyText;
+	color: $textGrey;
 	line-height: 1.5;
+	font-size: 1.6rem;
 }
 
 /*blockquotes*/
@@ -68,6 +87,11 @@ Global Classes / Wordpress Specific
 ====================================
 */
 
+html {
+	font-size: 10px;
+	font-size: 62.5%;
+}
+
 .aligncenter {
 	text-align: center;
 	margin: 0 auto;
@@ -94,4 +118,8 @@ img {
 	width: 100%;
 	float: left;
 	clear: both;
+}
+
+.note {
+
 }

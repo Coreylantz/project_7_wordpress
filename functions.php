@@ -13,6 +13,7 @@ function theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size(120, 90, true);
 	add_image_size('square', 150, 150, true);
+	add_image_size('hero', 1600, 800, true);
 
 
 	// Add default posts and comments RSS feed links to head
@@ -22,7 +23,8 @@ function theme_setup() {
 	* You can allow clients to create multiple menus by
   * adding additional menus to the array. */
 	register_nav_menus( array(
-		'primary' => 'Primary Navigation'
+		'primary' => 'Primary Navigation',
+		'footer' => 'Footer Navigation'
 	) );
 
 	/*
@@ -175,6 +177,16 @@ function hackeryou_widgets_init() {
 		'after_title' => '</h3>',
 	) );
 
+	register_sidebar( array(
+		'name' => 'Footer Widget',
+		'id' => 'footer-widget-area',
+		'description' => 'The footer widget area',
+		'before_widget' => '<ul class="menu"><li id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</li></ul>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+
 }
 
 add_action( 'widgets_init', 'hackeryou_widgets_init' );
@@ -275,4 +287,13 @@ function get_post_parent($post) {
 	else {
 		return $post->ID;
 	}
+}
+
+// add_filter('show_admin_bar', '__return_false');
+
+// Custom function to get post thumbnail URL
+function hackeryou_featured_image_url($currentPost) {
+    $image_id = get_post_thumbnail_id($currentPost->ID);
+    $image_url = wp_get_attachment_url($image_id);
+    return $image_url;
 }
