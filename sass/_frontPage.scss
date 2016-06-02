@@ -1,0 +1,67 @@
+.frontPost {
+	width: 100%;
+	position: relative;
+	margin-bottom: 25px; 
+	display: flex;
+
+
+	
+	&:nth-child(2n) {
+		flex-direction: row-reverse;
+
+		.frontPostText {
+			left: -5%;
+		}
+	}
+
+	figure {
+		height: 60%;
+		width: 60%;
+		box-shadow: 0 0 1px $textGrey;
+		position: relative;
+
+		&:before {
+			@extend .borderLinesStyle;
+			content: '';
+			top: 42px;
+			left: 80px;
+			right: 80px;
+			bottom: 42px;
+		
+		}
+
+		&:after {
+			@extend .borderLinesStyle;
+			content: '';
+			top: 40px;
+			left: 82px;
+			right: 82px;
+			bottom: 40px;
+		}
+		
+		img{
+			height: 100%;
+			width: 100%;
+			display: block;
+		}
+	}
+
+
+
+
+	.frontPostText{
+		width: 50%;
+		height: 70%;
+		padding: 5%;
+		background: white;
+		text-align: center;
+		box-shadow: 0 0 1px $textGrey;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		position: absolute;
+		top: 15%;
+		right: -5%;
+		z-index: 50;
+	}
+}

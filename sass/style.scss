@@ -14,6 +14,7 @@
 @import 'sidebar';
 @import 'comments';
 @import 'footer';
+@import 'frontPage';
 /*
 
 ====================================
@@ -36,10 +37,10 @@ body {
 }
 
 .content {
-	float: left;
-	width: 65%;
-	margin-right: 5%;
-	margin: 0 auto;
+	display: flex;
+	width: 80%;
+	margin: 50px auto;
+	flex-direction: column;
 }
 
 .full {
@@ -69,28 +70,21 @@ body {
 
 		&:before {
 			content: '';
-			border: 1px solid $textGrey;
-			position: absolute;
 			top: -72px;
 			left: -140px;
 			right: -140px;
 			bottom: -72px;
-			border-radius: 5px;
+			@extend .borderLinesStyle;
 			z-index: -1;
-			
-
 		}
 
 		&:after {
 			content: '';
-			border: 1px solid $textGrey;
-			position: absolute;
 			top: -70px;
 			left: -142px;
 			right: -142px;
 			bottom: -70px;
-			border-radius: 5px;
-			z-index: 10;
+			@extend .borderLinesStyle;
 			z-index: -2;
 		}
 	}	

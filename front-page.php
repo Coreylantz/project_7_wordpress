@@ -10,8 +10,8 @@
     
   </div>
 
-  <div class="container">
-    <div class="content" id="content">
+  <div class="container clearfix">
+    <div class="content frontContent" id="content">
         
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
@@ -19,14 +19,14 @@
                <?php if ( $frontPagePosts->have_posts() ) : ?>
                    <?php while ( $frontPagePosts->have_posts() ) : $frontPagePosts->the_post(); ?>
                       <div class="frontPost">
+                        <figure>
+                          <img src="<?php the_post_thumbnail_url('large'); ?>" alt="">
+                        </figure>
                         <div class="frontPostText">
                           <p><?php the_category(' '); ?></p>
                           <h2><?php the_title(); ?></h2>
-                          <p><?php the_date(); ?></p>
+                          <p><?php the_time('F j, Y'); ?></p>
                           <?php the_excerpt(); ?>
-                        </div>
-                        <div class="images">
-                          <img src="<?php the_post_thumbnail_url('Thumbnail'); ?>">
                         </div>
                       </div>
                    <?php endwhile; ?>
