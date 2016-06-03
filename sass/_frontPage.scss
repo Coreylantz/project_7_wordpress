@@ -15,10 +15,12 @@
 	}
 
 	figure {
-		height: 60%;
-		width: 60%;
+		max-height: 390px;
+		max-width: 575px;
+		overflow: hidden;
 		box-shadow: 0 0 1px $textGrey;
 		position: relative;
+
 
 		&:before {
 			@extend .borderLinesStyle;

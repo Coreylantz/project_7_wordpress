@@ -43,6 +43,11 @@ body {
 	flex-direction: column;
 }
 
+.sideContent {
+	width: 70%;
+	float: left;
+}
+
 .full {
 	width: 100%;
 }
@@ -55,6 +60,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	padding: 5%;
+	box-shadow: 0 0 3px $textGrey;
 
 
 	.heroPost {
@@ -88,6 +94,11 @@ body {
 			z-index: -2;
 		}
 	}	
+}
+
+article {
+	background: white;
+	margin: 20px 0;
 }
 
 

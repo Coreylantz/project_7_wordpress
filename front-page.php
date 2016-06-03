@@ -33,7 +33,7 @@
                    <?php wp_reset_postdata(); ?>
 
            <?php else:  ?>
-               [stuff that happens if there aren't any posts]
+               
            <?php endif; ?>
 
         <?php comments_template( '', true ); ?>
