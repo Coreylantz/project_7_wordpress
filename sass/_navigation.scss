@@ -1,0 +1,30 @@
+ul.menu {
+	margin: 0;
+	padding: 0;
+	background: white;
+	font-family: $navText;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 50px;
+
+
+
+	li {
+		display: inline;
+		margin-right: 10px;
+
+		&:hover {
+			a {
+				color: $link;
+			}
+		}
+		
+		a {
+			padding: 10px;
+			color: $black;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+	}
+}

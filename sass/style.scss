@@ -1,0 +1,110 @@
+/*!
+* Theme Name: HackerYou Starter Theme
+* Theme URI: http://hackeryou.com;
+* Description: Starter theme for building any website. Created by HackerYou. * Rename this to your own theme page.
+* Version: 1.0
+* Author: HackerYou
+* Author URI: http://hackeryou.com
+*/
+
+@import 'variables';
+@import 'normalize';
+@import 'typography';
+@import 'navigation';
+@import 'sidebar';
+@import 'comments';
+@import 'footer';
+@import 'frontPage';
+/*
+
+====================================
+Default Styling
+====================================
+*/
+
+img {
+	max-width: 100%;
+}
+
+body {
+	color: #333;
+	background: $background;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.content {
+	display: flex;
+	width: 80%;
+	margin: 50px auto;
+	flex-direction: column;
+}
+
+.sideContent {
+	width: 70%;
+	float: left;
+}
+
+.full {
+	width: 100%;
+}
+
+// Front-page styles //
+
+.hero {
+	height: 75vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5%;
+	box-shadow: 0 0 3px $textGrey;
+
+
+	.heroPost {
+		background: $background;
+		position: relative;
+		padding: 5% 10%;
+		text-align: center;
+		z-index: 20;
+		
+		a {
+			z-index: 50;
+		}
+
+		&:before {
+			content: '';
+			top: -72px;
+			left: -140px;
+			right: -140px;
+			bottom: -72px;
+			@extend .borderLinesStyle;
+			z-index: -1;
+		}
+
+		&:after {
+			content: '';
+			top: -70px;
+			left: -142px;
+			right: -142px;
+			bottom: -70px;
+			@extend .borderLinesStyle;
+			z-index: -2;
+		}
+	}	
+}
+
+article {
+	background: white;
+	margin: 20px 0;
+}
+
+
+
+
+
+
+
+
