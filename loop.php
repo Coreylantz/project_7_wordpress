@@ -17,7 +17,9 @@
 <?php while ( have_posts() ) : the_post(); ?>
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<figure style="background:url('<?php the_post_thumbnail_url('medium'); ?>'); width: 30%; " >
+
+			<figure style="background:url('<?php the_post_thumbnail_url('medium'); ?>'); width: 30%;" >
+
 			</figure>
 			
 
