@@ -1,11 +1,44 @@
 .sidebar {
 	width: 30%;
 	float: left;
+	margin: 20px 0;
+	padding: 0 2%;
+
+	.widget-container {
+		margin: 20px 0;
+		background: white;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
 	ul {
 		margin: 0;
 		padding: 0;
+
 		li {
 			list-style: none;
+			display: flex;
+			flex-direction: column;
+
+			h3 {
+				background: $black;
+				color: white;
+				text-align: center;
+				padding: 10px;
+			}
+		}
+	}
+}
+
+.textwidget {
+	padding: 1%;
+}
+
+.sidebar {
+	li {
+		ul {
+			padding: 1%;
 		}
 	}
 }

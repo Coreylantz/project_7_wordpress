@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="main">
-  <div class="hero" style="background:url(<?php the_post_thumbnail_url('hero'); ?>); background-size: cover; background-position: center; ">
+  <div class="hero" style="background:url(<?php the_post_thumbnail_url('hero'); ?>); background-size: cover; background-position: center; background-color: #202020;">
     <div class="heroPost">
       <h1 class="entry-title"><?php the_field('heroTitle'); ?></h1>
       <p class="note"><?php the_field('heroSubtitle'); ?></p>

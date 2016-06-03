@@ -26,14 +26,36 @@ h1 {
 	font-size: 3.5rem;
 }
 
+h2 {
+	font-size: 2rem;
+	text-transform: capitalize;
+	color: $black;
+	margin-bottom: 5px;
+
+	a {
+		font-size: 2rem;
+		text-transform: capitalize;
+		color: $black;
+	}
+}
+
+h3 {
+	font-size: 2rem;
+	margin-bottom: 5px;
+	letter-spacing: 1px;
+	font-weight: lighter;
+}
+
 p {
 	font-family: $bodyText;
 	color: $textGrey;
 	line-height: 1.5;
-	font-size: 1.6rem;
+	font-size: 1.3rem;
 	margin: 0;
 	padding: 0;
 }
+
+
 
 /*blockquotes*/
 

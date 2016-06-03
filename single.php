@@ -2,15 +2,23 @@
 
 <div class="main">
   <div class="container">
-    <div class="content">
+    <div class="sideContent">
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-        <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-          <h1 class="entry-title"><?php the_title(); ?></h1>
+  
+        
+        <div class="single" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+          
+          <figure>
+            <img src="<?php the_post_thumbnail_url('largeSquare'); ?>" alt="">
+          </figure>
+          <div class="singleTitle">
+            <h1 class="entry-title"><?php the_title(); ?></h1>
 
-          <div class="entry-meta">
-            <?php hackeryou_posted_on(); ?>
-          </div><!-- .entry-meta -->
+            <div class="entry-meta">
+              <?php hackeryou_posted_on(); ?>
+            </div><!-- .entry-meta -->
+          </div>
 
           <div class="entry-content">
             <?php the_content(); ?>

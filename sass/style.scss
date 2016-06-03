@@ -96,10 +96,101 @@ body {
 	}	
 }
 
+
+// Blog Styles
 article {
 	background: white;
 	margin: 20px 0;
+	display: flex;
+
+	section {
+		width:calc(70% - 15px);
+		padding: 1%;
+		margin-left: 15px;
+	}
+
+	footer {
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-end;
+
+		a {
+			font-size: 1.3rem;
+		}
+	}
 }
+
+
+// Single Page styles
+
+.single{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: white;
+	margin: 20px 0;
+
+	h1 {
+		margin: 10px 0;
+	}
+
+	span {
+		font-size: 1.3rem;
+	}
+	
+	figure {
+		width: 100%;
+		max-height: 500px;
+		overflow: hidden;
+		position: relative;
+		background: $black;
+
+		&:before {
+			content: '';
+			top: 60%;
+			left: 5%;
+			right: 5%;
+			bottom: 0;
+			@extend .borderLinesStyle;
+			border-bottom: 0;
+			border-radius: 5px 5px 0 0;
+		}
+
+		&:after {
+			content: '';
+			top: 59%;
+			left: 5.5%;
+			right: 5.5%;
+			bottom: 0;
+			@extend .borderLinesStyle;
+			border-bottom: 0;
+			border-radius: 5px 5px 0 0;
+		}
+		img {
+			width: 100%;
+			display: block;
+		}
+	}
+	
+	.singleTitle{
+		text-align: center;
+		position: relative;
+		top: -70px;
+		padding: 5% 0 0;
+		background: white;
+		width: 80%;
+		z-index: 60;
+	}
+
+	.entry-content {
+		padding: 0 5%;
+	}
+
+	p {
+	    margin: 15px 0;
+	}
+}
+
 
 
 
