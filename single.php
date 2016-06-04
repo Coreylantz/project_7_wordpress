@@ -7,12 +7,13 @@
 
   
         
-        <div class="single" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <div class="singlePage" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
           
           <figure>
             <img src="<?php the_post_thumbnail_url('largeSquare'); ?>" alt="">
           </figure>
           <div class="singleTitle">
+            
             <h1 class="entry-title"><?php the_title(); ?></h1>
 
             <div class="entry-meta">
@@ -28,10 +29,7 @@
             )); ?>
           </div><!-- .entry-content -->
 
-          <div class="entry-utility">
-            <?php hackeryou_posted_in(); ?>
-            <?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?>
-          </div><!-- .entry-utility -->
+          
         </div><!-- #post-## -->
 
         <div id="nav-below" class="navigation">

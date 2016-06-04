@@ -60,11 +60,36 @@ p {
 /*blockquotes*/
 
 blockquote {
-	background: #F7F7F7;
+	background: $black;
 	margin: 0;
-	padding: 20px;
+	padding: 30px;
+	position: relative;
+
+	&:before {
+		content: "\f10d";
+		font-family: FontAwesome;
+		position: absolute;
+		font-size: 2rem;
+		color: $link;
+		top: 10px;
+		left: 15px;
+	}
+
+	&:after {
+		content: "\f10e";
+		font-family: FontAwesome;
+		position: absolute;
+		font-size: 2rem;
+		color: $link;
+		bottom: 10px;
+		right: 15px;
+	}
+
 	p {
 		margin-top: 0;
+		font-style: italic;
+		color: white;
+		font-size: 1.6rem;
 	}
 }
 

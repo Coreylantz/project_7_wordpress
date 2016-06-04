@@ -184,7 +184,12 @@ h3#reply-title {
 		margin: 0 0 24px;
 		input {
 			width: auto;
-			font-size: 14px;
+			margin-top: 10px;
+			background: #020202;
+			color: white;
+			border: 1px solid #939393;
+			position: relative;
+			font-family: "Open Sans",sans-serif;
 		}
 	}
 	dl {

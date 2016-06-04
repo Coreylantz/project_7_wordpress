@@ -18,8 +18,7 @@
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-			<figure style="background:url('<?php the_post_thumbnail_url('medium'); ?>'); background-position: center;background-size: cover; background-color: $black; width: 30%;" >
-
+			<figure style="background:url('<?php the_post_thumbnail_url('medium'); ?>'); background-position: center;background-size: cover; background-color: #020202; width: 30%;" >
 			</figure>
 			
 

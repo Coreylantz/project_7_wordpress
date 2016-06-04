@@ -15,6 +15,7 @@
 @import 'comments';
 @import 'footer';
 @import 'frontPage';
+@import 'comment';
 /*
 
 ====================================
@@ -100,8 +101,30 @@ body {
 // Blog Styles
 article {
 	background: white;
-	margin: 20px 0;
+	margin: 50px 0;
 	display: flex;
+	box-shadow: 0 0 3px #939393;
+
+	figure {
+		position: relative;
+		&:before {
+			content: '';
+			top: 5%;
+			left: 12%;
+			right: 12%;
+			bottom: 5%;
+			@extend .borderLinesStyle;
+		}
+
+		&:after {
+			content: '';
+			top: 7%;
+			left: 10%;
+			right: 10%;
+			bottom: 7%;
+			@extend .borderLinesStyle;
+		}
+	}
 
 	section {
 		width:calc(70% - 15px);
@@ -123,15 +146,17 @@ article {
 
 // Single Page styles
 
-.single{
+.singlePage{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	background: white;
+	box-shadow: 0 0 3px $textGrey;
+	
 	margin: 20px 0;
 
 	h1 {
-		margin: 10px 0;
+		margin: 10px;
 	}
 
 	span {
@@ -153,7 +178,6 @@ article {
 			bottom: 0;
 			@extend .borderLinesStyle;
 			border-bottom: 0;
-			border-radius: 5px 5px 0 0;
 		}
 
 		&:after {
@@ -164,7 +188,6 @@ article {
 			bottom: 0;
 			@extend .borderLinesStyle;
 			border-bottom: 0;
-			border-radius: 5px 5px 0 0;
 		}
 		img {
 			width: 100%;
@@ -184,14 +207,26 @@ article {
 
 	.entry-content {
 		padding: 0 5%;
-	}
-
 	p {
 	    margin: 15px 0;
 	}
+	}
+
 }
 
+// Contact page Styles
 
+.acf-map {
+	width: 100%;
+	height: 400px;
+	border: #ccc solid 1px;
+	margin: 20px 0;
+}
+
+/* fixes potential theme css conflict */
+.acf-map img {
+   max-width: inherit !important;
+}
 
 
 
